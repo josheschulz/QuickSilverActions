@@ -2,7 +2,9 @@ using terms from application "Quicksilver"
   on process text direct_object
    try
       tell application "Evernote"
-         set query string of window 1 to direct_object
+         set query string of window 1 whose class = collection window to direct_object
+         activate
+
       end tell
    on error a number b
       activate
